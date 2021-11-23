@@ -1,8 +1,10 @@
 <f:layout name="Default" />
 <f:section name="Main">
 
-<h1>Hello World!</h1>
-<f:render partial="MyPartial" />
+<h1>{data.title}</h1>
+<f:if condition="{data.subtitle}">
+<p><em>{data.subtitle}</em></p>
+</f:if>
 <f:cObject typoscriptObjectPath="lib.dynamicContent" data="{colPos: '0'}" />
 
 </f:section>

@@ -4,9 +4,9 @@ DUMPGZ=initial/dump.sql.gz
 T3LOCALCONF=public/typo3conf/localconf.php
 T3SITECONF=public/typo3conf/LocalConfiguration.php
 T3PKGSTATES=public/typo3conf/PackageStates.php
-SITEPKGSRC=site_cos
 SITEPKGTGT=public/typo3conf/ext/site_cos
 DESTDIR?=/var/www
+# DEV=1 # for development mode
 
 .PHONY: all
 all: $(T3SITECONF) $(T3PKGSTATES)
@@ -17,9 +17,13 @@ vendor: composer.lock
 $(LOCALCONF):
 	test -f $@ || echo "You need a $(LOCALCONF). Use localconf.php.sample as a model" && exit 1
 
-$(SITEPKGTGT): $(SITEPKGSRC) vendor
+$(SITEPKGTGT): site_cos vendor
 	mkdir -p $(dir $@)
-	cp -r $(SITEPKGSRC) $@
+ifdef DEV
+	ln -sf ../../../site_cos $@
+else
+	cp -r site_cos $@
+endif
 
 $(T3SITECONF): $(LOCALCONF) vendor $(SITEPKGTGT)
 	cp $(LOCALCONF) $(T3LOCALCONF)

@@ -5,6 +5,9 @@
 page = PAGE
 page {
    typeNum = 0
+   includeCSS {
+      main = EXT:site_cos/Resources/Public/css/main.css
+   }
 
 // Part 1: Fluid template section
 10 = FLUIDTEMPLATE
@@ -21,16 +24,17 @@ page {
       default.value = Default
    }
    templateRootPaths {
-      0 = EXT:site_cos/Resources/Private/Templates/Page/
-      1 = {$page.fluidtemplate.templateRootPath}
+      0 = {$page.fluidtemplate.templateRootPath}
    }
    partialRootPaths {
-      0 = EXT:site_cos/Resources/Private/Partials/Page/
-      1 = {$page.fluidtemplate.partialRootPath}
+      0 = {$page.fluidtemplate.partialRootPath}
    }
    layoutRootPaths {
-      0 = EXT:site_cos/Resources/Private/Layouts/Page/
-      1 = {$page.fluidtemplate.layoutRootPath}
+      0 = {$page.fluidtemplate.layoutRootPath}
+   }
+   variables {
+      siteTitle = TEXT
+      siteTitle.data = site:websiteTitle
    }
 }
 
@@ -65,4 +69,5 @@ config {
    compressJs = 0
    concatenateCss = 0
    concatenateJs = 0
+}
 }
