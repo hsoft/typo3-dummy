@@ -1,0 +1,17 @@
+version: "2.2"
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: dev
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: dev
+      MYSQL_DATABASE: dev
+  web:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+     - "8080:80"
+    links:
+     - "db:db"

@@ -1,0 +1,9 @@
+<?php
+$localconf = [
+    'dbhost' => 'localhost',
+    'dbuser' => 'root',
+    'dbpass' => '',
+    'dbname' => 't3_cos',
+    'secretkey' => 'dontcareaboutsecurity',
+    'sitename' => 'Collapse OS website',
+];
