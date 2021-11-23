@@ -1,7 +1,7 @@
 <f:layout name="Default" />
 <f:section name="Main">
 
-<h1>{data.title}</h1>
+<h1><f:if condition="{data.pid} > 0"><a href="/">{siteTitle}</a> &mdash; </f:if>{data.title}</h1>
 <f:if condition="{data.subtitle}">
 <p><em>{data.subtitle}</em></p>
 </f:if>
