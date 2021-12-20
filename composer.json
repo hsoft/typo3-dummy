@@ -1,5 +1,11 @@
 {
+    "repositories": {
+        "0": {"type": "composer", "url": "https://composer.typo3.org/"},
+        "1": { "type": "path", "url": "./localexts/*", "options": {"symlink": true}}
+    },
     "require": {
-        "typo3/cms-base-distribution": "^10"
+        "typo3/cms-base-distribution": "^10",
+        "typo3/cms-reports": "^10",
+        "local/site-cos": "*"
     }
 }

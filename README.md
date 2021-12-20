@@ -31,11 +31,6 @@ http://localhost:8080 and the admin at http://localhost:8080/typo3.
 
 Username: `admin` Password: `Foobar42`
 
-### Development mode
-
-If you run `make DEV=1`, `site_cos` will be a symlink, which means that
-modifications to it will be reflected on the website.
-
 ## Docker deployment
 
 Prerequisites:

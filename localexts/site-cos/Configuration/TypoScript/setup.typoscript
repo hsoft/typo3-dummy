@@ -1,12 +1,12 @@
 @import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
-@import 'EXT:site_cos/Configuration/TypoScript/Helper/DynamicContent.typoscript'
+@import 'EXT:site-cos/Configuration/TypoScript/Helper/DynamicContent.typoscript'
 
 
 page = PAGE
 page {
    typeNum = 0
    includeCSS {
-      main = EXT:site_cos/Resources/Public/css/main.css
+      main = EXT:site-cos/Resources/Public/css/main.css
    }
 
 // Part 1: Fluid template section

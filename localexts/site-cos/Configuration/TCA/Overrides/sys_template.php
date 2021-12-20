@@ -6,7 +6,7 @@ call_user_func(function()
    /**
     * Extension key
     */
-   $extensionKey = 'site_cos';
+   $extensionKey = 'site-cos';
 
    /**
     * Default TypoScript

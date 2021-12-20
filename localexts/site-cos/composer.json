@@ -1,0 +1,20 @@
+{
+	"name": "local/site-cos",
+	"description": "",
+	"license": "proprietary",
+	"type": "typo3-cms-extension",
+    "version": "1.0",
+	"require": {
+		"php": ">=7.0.0"
+	},
+    "extra": {
+      "typo3/cms": {
+         "extension-key": "site-cos"
+      }
+    },
+	"autoload": {
+		"psr-4": {
+			"CollapseOS\\": "Classes/"
+		}
+	}
+}
