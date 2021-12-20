@@ -1,10 +1,13 @@
 # Typo3 dummy website
 
 This is a dummy CMS using Typo3 and wrapped around tooling that is as simple and
-elegant as possible.
+elegant as possible. The goal of this project is twofold:
 
-The logic of the website is contained in the `site_cos` Sitepackage and the
-supporting data dump is in `initial/dump.sql.gz`.
+1. Have something devoid of history so that it can represent elegance.
+2. Be s hacking space where I can try stuff to perfect my knowledge of typo3.
+
+The logic of the website is contained in the `localexts/site-cos` sitepackage
+and the supporting data dump is in `initial/dump.sql.gz`.
 
 There are two deployment options: bare and docker.
 
